@@ -58,7 +58,7 @@ class MyLocalSearch(LocalSearch):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='PYGGI Improvement Example')
-    parser.add_argument('--project_path', type=str, default='../sample/Triangle_fast_java')
+    parser.add_argument('--project_path', type=str, default='../sample/Square_fast_java')
     parser.add_argument('--mode', type=str, default='line')
     parser.add_argument('--epoch', type=int, default=30,
         help='total epoch(default: 30)')
@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
     if args.mode == 'line':
         config = {
-            "target_files": ["Triangle.java"],
+            "target_files": ["Square.java"],
             "test_command": "./run.sh"
         }
         program = MyLineProgram(args.project_path, config=config)
