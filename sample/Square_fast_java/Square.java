@@ -27,7 +27,7 @@ public class Square {
             c = tmp;
         }
 
-        if (a + b <= c) {
+        if (a != b && a != c && a != d) {
             return SquareType.INVALID;
         } else if (a == b && b == c && c == a) {
             return SquareType.SQUARE;
